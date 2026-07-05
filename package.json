@@ -1,0 +1,13 @@
+{
+  "name": "proseka-simulator",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "playwright": "^1.61.1",
+    "sqlite3": "^5.1.6"
+  }
+}

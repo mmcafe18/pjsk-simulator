@@ -1,0 +1,102 @@
+@media (max-width: 768px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .left-area {
+        width: 100%;
+        height: 35vw;
+    }
+
+    .teams,
+    .cards {
+        width: 100%;
+    }
+
+    /* スマホでは常時表示しない */
+    .settings {
+        display: none;
+    }
+
+    .cards {
+        height: 45vh;
+    }
+
+    #totalPower {
+        font-size: clamp(10px, 7vw, 72px);
+        font-weight: bold;
+        color: #404040;
+    }
+
+    .teams-open-div {
+        height: 30%;
+    }
+
+    .teams {
+        transition: height 0.4s linear;
+    }
+
+    .settings-responsive {
+        margin-top: 2%;
+        height: 0vh;
+        transition: height 0.4s linear;
+        overflow: hidden;
+    }
+
+    .settings-responsive.open {
+        height: 18vh;
+    }
+
+    .teams-namebox-power-dev.open {
+        height: 10%;
+    }
+
+
+    .teams.open {
+        height: 75vh;
+    }
+
+    .cards-list {
+        transition: margin 0.4s linear;
+    }
+
+    .cards-list.open {
+        margin-top: 23vh;
+    }
+
+    .detail-open {
+        display: block;
+        margin-top: 1.5%;
+        margin-left: 2%;
+        width: 96%;
+        height: 4cqw;
+        border: none;
+        border-radius: 10px;
+        font-size: 0.5cqw;
+        font: var(--font-main-);
+        font-weight: 600;
+        color: #404040;
+        cursor: pointer;
+        transition: transform 0.5s, box-shadow 0.5s;
+    }
+
+    .card-settings-title-responsive {
+        display: block;
+        margin-top: 1%;
+        margin-left: 2%;
+        font-size: clamp(16px, 2vw, 24px);
+        color: #404040;
+    }
+
+    .cards-filter-div.open {
+        margin-top: 23vh;
+    }
+
+    .settings-responsive * {
+        display: block;
+    }
+}

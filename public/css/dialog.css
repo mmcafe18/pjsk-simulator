@@ -1,0 +1,126 @@
+button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.resetDialog,
+.filterDialog {
+    border: none;
+    border-radius: 12px;
+    padding: 24px;
+    width: 45vw;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+.filterDialog {
+    width: min(80vw, 600px);
+    height: min(80vh, 600px);
+
+    
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+}
+
+.resetDialog::backdrop,
+.filterDialog::backdrop {
+    background: rgba(0,0,0,.5);
+}
+
+.reset-dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 200px;
+}
+
+.filter-dialog-main {
+    display: flex;
+    height: 85%;
+    flex-direction: column;
+}
+
+.filter-dialog-unit,
+.filter-dialog-member,
+.filter-dialog-rarity,
+.filter-dialog-type {
+   flex: 1;
+}
+
+.filter-dialog-member {
+    flex: 3
+}
+
+.filter-dialog-text {
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.filter-dialog-unit-div,
+.filter-dialog-rarity-div,
+.filter-dialog-type-div,
+.filter-dialog-member-div {
+    width: 96%;
+    height: 100%;
+    display: flex;
+    margin-left: 4%;
+    flex-wrap: wrap;
+}
+
+.filter-dialog-unit-icon,
+.filter-dialog-rarity-icon,
+.filter-dialog-member-icon,
+.filter-dialog-type-icon {
+    width: 6cqh;
+    margin-right: 2%;
+    align-self: flex-start;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.filter-dialog-rarity-icon {
+    border-radius: 20%;
+    margin-right: 4%;
+    background-position: left;
+    background-repeat: repeat-x;
+}
+
+.filter-dialog-unit-icon:hover,
+.filter-dialog-rarity-icon:hover,
+.filter-dialog-type-icon:hover,
+.filter-dialog-member-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cards-filter-length {
+    justify-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.cards-length-text {
+    padding: 8%;
+    font-size: clamp(20px, 2vw, 36px);
+    font-weight: 500;
+    color: #404040;
+}
+
+.non-selected {
+    opacity: 0.2;
+}

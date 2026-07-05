@@ -1,0 +1,142 @@
+.teams-namebox-power-dev {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2%;
+    width: 100%;
+    height: 20%;
+}
+
+.team-name-input {
+    margin-top: 1%;
+    margin-left: 2%;
+    height: 75%;
+    width: 140%;
+    padding-left: 2%;
+    background-color: #eee;
+    border-color: transparent;
+    border-radius: 12px;
+    outline: none;
+    font-size: clamp(16px, 2vw, 24px);
+    font-weight: bold;
+    color: #404040;
+}
+
+.teams-totalPower-dev {
+    width: 100%;
+    height: 100%;
+}
+
+.teams-totalPower-img {
+    height: 65%;
+    margin-left: 80%;
+    margin-top: 3%;
+    aspect-ratio: 1 / 1;
+    background-image: url("../image/icon/power.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.teams-totalPower-span {
+    width: 100%;
+    height: 100%;
+    margin-right: 2%;
+    text-align: right;
+}
+
+.team-name-input:focus {
+    border-color: var(--border-color-);
+}
+
+.teams-member-dev {
+    display: flex;
+    align-items: flex-start;
+    grid-template-columns: repeat(5, 1fr);
+    width: 96%;
+    gap: 10px;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.teams-member-slot {
+    position: relative;
+    display: flex;
+    justify-content: center; /* 横中央 */
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 正方形 */
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background: #eee;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.master-image {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+
+    width: 30%;
+    aspect-ratio: 1 / 1;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.canvas-image {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+
+    width: 30%;
+    aspect-ratio: 1 / 1;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.teams-member-slot:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.teams-member-slot.selected {
+    border: 3px solid #999;
+}
+
+.slot-plus {
+    font-size: 2em;
+    color: #c7c7c7;
+    font-weight: bold;
+}
+
+#totalPower {
+    font-size: clamp(20px, 3vw, 36px);
+    font-weight: bold;
+    color: #404040;
+}
+
+.teams-level {
+    position: absolute;
+    bottom: 21%;
+
+    display: none;
+    width: 100%;
+    height: 19%;
+    background-color: #31343497;
+}
+
+.teams-level .teams-level-text {
+    font: var(--font-main-);
+    padding-left: 8%;
+    font-weight: 550;
+    font: 0.7em;
+    color: white;
+}

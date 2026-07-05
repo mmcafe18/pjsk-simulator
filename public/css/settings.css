@@ -1,0 +1,259 @@
+.settings-div {
+    display: flex;
+    position: relative;
+}
+
+.settings-reset {
+    margin-top: 1.5%;
+    position: absolute;
+    right: 2%;
+}
+
+.reset {
+    width: 9cqw;
+    height: 2.5cqw;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.5cqw;
+    font: var(--font-main-);
+    font-weight: 600;
+    background-color: #ff7590;
+    color: #fff9f9;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.reset:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-settings-title {
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: clamp(16px, 2vw, 24px);
+    color: #404040;
+}
+
+.settings-icon-power-div {
+    display: flex;
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.settings-status-div {
+    display: flex;
+    width: 98%;
+    height: 7vw;
+    margin-top: 2%;
+}
+
+.settings-icon {
+    width: 8vw;
+    aspect-ratio: 1 / 1;
+    background-color: #ddd;
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.settings-power-detail {
+    flex: 2;
+    width: 100%;
+    margin-left: 2%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.settings-story {
+    flex: 1;
+    width: 50%;
+    margin-left: 2%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.settings-canvas {
+    flex: 1;
+    width: 50%;
+    margin-left: 2%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.settings-level {
+    flex: 3;
+    width: 100%;
+    margin-left: 2%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.settings-training {
+    flex: 1;
+    width: 100%;
+    margin-left: 2%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.settings-master {
+    flex: 2;
+    width: 100%;
+    margin-left: 2%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.settings-skill {
+    flex: 1.5;
+    width: 100%;
+    margin-left: 2%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.power-pf,
+.power-te,
+.power-st {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 4%;
+    height: 33%;
+    font-size: 1.1cqw;
+    color: #404040;
+}
+
+.power-text {
+    flex: 2;
+    text-align: right;
+    padding-left: 3%;
+    padding-right: 20%;
+    font-size: 1.5cqw;
+    color: #404040;
+}
+
+.story-text1,
+.story-text2,
+.canvas-text1,
+.canvas-text2,
+.training-text {
+    padding-top: 3%;
+    text-align: center;
+    font-size: 1.1cqw;
+    color: #404040;
+}
+
+.training-text {
+    padding-top: 10%;
+}
+
+.level-text, 
+.master-text,
+.skill-text {
+    display: flex;
+    padding-top: 3%;
+    padding-left: 3%;
+    font-size: 1.3cqw;
+    color: #404040;
+}
+
+.level-slider,
+.master-slider,
+.skill-slider {
+    display: flex;
+}
+
+.level,
+.master,
+.skill {
+    flex: 6;
+    appearance: none;
+    -webkit-appearance: none;
+
+    margin-top: 5%;
+    width: 70%;
+    height: 1cqw;
+    border-radius: 999px;
+    outline: none;
+
+    background: linear-gradient(
+        to right,
+        #ff7590 0%,
+        #ff7590 0%,
+        #ddd 0%,
+        #ddd 100%
+    );
+}
+
+.level::-webkit-slider-thumb,
+.master::-webkit-slider-thumb,
+.skill::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 2cqw;
+  height: 2cqw;
+  border-radius: 50%;
+
+  background: #ff7590;
+  border: 3px solid white;
+  cursor: pointer;
+}
+
+#lv-text,
+#master-text,
+#skill-text {
+    flex: 2;
+}
+
+.slider-min,
+.slider-max {
+    flex: 1;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 1.4cqw;
+    font-weight: 600;
+    color: #404040;
+}
+
+.story,
+.canvas,
+.training {
+    margin-top: 5%;
+    margin-left: 9%;
+    width: 4.2cqw;
+    height: 2cqw;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.5cqw;
+    font: var(--font-main-);
+    font-weight: 600;
+    color: #404040;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.canvas {
+    width: 10cqw;
+}
+
+.training {
+    width: 6.5cqw;
+}
+
+.button-active {
+    background-color: #ff7590;
+    color: #fff9f9;
+}
+
+.story:hover,
+.canvas:hover,
+.training:hover {
+    background-color: #ff7590;
+    color: #fff9f9;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
