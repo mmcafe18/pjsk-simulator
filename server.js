@@ -1,11 +1,12 @@
 const express = require("express");
 const db = require("./db");
 
+const path = require("path");
 const app = express();
 const PORT = 3000;
 
 // publicフォルダを公開
-app.use(express.static("public"));
+app.use(express.static(__dirname));
 
 // JSONを受け取れるようにする
 app.use(express.json());

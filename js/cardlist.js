@@ -5,7 +5,7 @@ const membersArea = document.querySelector(".teams-member-dev");
 
 export async function reloadCard() {
     let length = 0;
-    const response = await fetch("/api/cards");
+    const response = await fetch("./database/character.json");
     const cards = await response.json()
 
     cards.forEach(card => {
