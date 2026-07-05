@@ -22,7 +22,7 @@ document.getElementById("filter-button").addEventListener("click", () => {
             const unitElement = document.createElement("div");
             unitElement.classList.add("filter-dialog-unit-icon");
             unitElement.id = param.key;
-            unitElement.style.backgroundImage = `url("/image/icon/unit/${param.key}.png")`;
+            unitElement.style.backgroundImage = `url("./image/icon/unit/${param.key}.png")`;
 
             unit.appendChild(unitElement);
 
@@ -31,7 +31,7 @@ document.getElementById("filter-button").addEventListener("click", () => {
                 memberElement.classList.add("filter-dialog-member-icon");
                 memberElement.id = p;
                 memberElement.dataset.unit = unitElement.id;
-                memberElement.style.backgroundImage = `url("/image/icon/member/${p}.png")`;
+                memberElement.style.backgroundImage = `url("./image/icon/member/${p}.png")`;
 
                 member.appendChild(memberElement);
 
@@ -65,7 +65,7 @@ document.getElementById("filter-button").addEventListener("click", () => {
             const typeElement = document.createElement("div");
             typeElement.classList.add("filter-dialog-type-icon");
             typeElement.id = p;
-            typeElement.style.backgroundImage = `url("/image/icon/type/${p}.png")`;
+            typeElement.style.backgroundImage = `url("./image/icon/type/${p}.png")`;
 
             type.appendChild(typeElement);
 
@@ -81,7 +81,7 @@ document.getElementById("filter-button").addEventListener("click", () => {
             const rarityElement = document.createElement("div");
             rarityElement.classList.add("filter-dialog-rarity-icon");
             rarityElement.id = `rarityImg${i}`;
-            rarityElement.style.backgroundImage = `url("/image/icon/star.png")`;
+            rarityElement.style.backgroundImage = `url("./image/icon/star.png")`;
 
             rarity.appendChild(rarityElement);
 
@@ -91,7 +91,7 @@ document.getElementById("filter-button").addEventListener("click", () => {
 
 
             if (i == 5) {
-                rarityElement.style.backgroundImage = `url("/image/icon/ribbon.png")`;
+                rarityElement.style.backgroundImage = `url("./image/icon/ribbon.png")`;
                 document.getElementById(`rarityImg${i}`).style.width = `6cqh`;
                 document.getElementById(`rarityImg${i}`).style.backgroundSize = `100% 100%`;
             }

@@ -28,8 +28,8 @@ export function powerCalc(){
 };
 
 export function teamsImage(){
-    document.getElementById(`master-image${state.SELECTED_SLOT+1}`).style.backgroundImage = `url("/image/icon/master_rank/${state.TEAMS[state.SELECTED_SLOT].master}.png")`; 
-    document.getElementById(`canvas-image${state.SELECTED_SLOT+1}`).style.backgroundImage = `url("/image/icon/${state.TEAMS[state.SELECTED_SLOT].canvas === "true" ? "canvas" : "nocanvas" }.png")`; 
+    document.getElementById(`master-image${state.SELECTED_SLOT+1}`).style.backgroundImage = `url("./image/icon/master_rank/${state.TEAMS[state.SELECTED_SLOT].master}.png")`; 
+    document.getElementById(`canvas-image${state.SELECTED_SLOT+1}`).style.backgroundImage = `url("./image/icon/${state.TEAMS[state.SELECTED_SLOT].canvas === "true" ? "canvas" : "nocanvas" }.png")`; 
 }
 
 export function levelCalc(minpower, maxpower, trainpower, nowlevel, maxlevel){

@@ -78,7 +78,7 @@ export const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         const element = entry.target;
-        element.style.backgroundImage = `url("/image/cards/non_training/${element.dataset.cardId}.png")`;
+        element.style.backgroundImage = `url("./image/cards/non_training/${element.dataset.cardId}.png")`;
         observer.unobserve(element);
     });
 });
@@ -111,7 +111,7 @@ export function cardDetail(obj){
     const levelSliderEle = document.getElementById("level_slider");
     const masterSliderEle = document.getElementById("master_slider");
 
-    document.getElementById("setting-icon").style.backgroundImage = `url("/image/cards/non_training/${cardId}.png")`;
+    document.getElementById("setting-icon").style.backgroundImage = `url("./image/cards/non_training/${cardId}.png")`;
     
     rarity ? document.getElementById("level_slider_max").textContent = state.LEVEL[rarity] : document.getElementById("level_slider_max").textContent = 20;
     rarity ? levelSliderEle.max = state.LEVEL[rarity] : document.querySelector(".level").max = 20;
