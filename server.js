@@ -12,7 +12,7 @@ app.use(cors());
 // キャラ取得API
 app.get("/api/cards", async (req, res) => {
     try {
-        const result = await db.query("SELECT * FROM cards");
+        const result = await db.query(`SELECT * FROM cards ORDER BY "CardID" ASC`);
         res.json(result.rows);
     } catch (err) {
         console.error(err);
