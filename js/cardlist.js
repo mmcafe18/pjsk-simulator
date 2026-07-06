@@ -5,7 +5,9 @@ const membersArea = document.querySelector(".teams-member-dev");
 
 export async function reloadCard() {
     let length = 0;
-    const response = await fetch("./database/character.json");
+    const API_URL = location.hostname === "localhost" ? "http://localhost:3000" : "https://pjsk-simulator-api.onrender.com";
+
+    const response = await fetch(`${API_URL}/api/cards`);
     const cards = await response.json()
 
     cards.forEach(card => {
@@ -16,9 +18,9 @@ export async function reloadCard() {
             cardElement.classList.add("disabled");
 
             cardElement.dataset.cardId = card.CardID;
-            cardElement.dataset.character = card.Character;
+            cardElement.dataset.character = card.CharacterName;
             cardElement.dataset.rarity = card.Rarity;
-            cardElement.dataset.type = card.Type;
+            cardElement.dataset.type = card.Attr;
             cardElement.dataset.unit = card.Unit;
             cardElement.dataset.subunit = card.SubUnit;
             cardElement.dataset.minperformance = card.MinPerformance;
