@@ -3,15 +3,16 @@ import { state, observer, cardDetail } from "./state.js";
 const cardsArea = document.querySelector(".cards");
 const membersArea = document.querySelector(".teams-member-dev");
 
+const API_URL = location.hostname === "localhost" ? "http://localhost:3000" : "https://pjsk-simulator-api.onrender.com";
+
 export async function reloadCard() {
     let length = 0;
-    const API_URL = location.hostname === "localhost" ? "http://localhost:3000" : "https://pjsk-simulator-api.onrender.com";
 
     const response = await fetch(`${API_URL}/api/cards`);
-    const cards = await response.json()
+    const cards = await response.json();
 
     cards.forEach(card => {
-        if (!state.FILTER.unit.includes(card.Unit) && !state.FILTER.rarity.includes(card.Rarity) && !state.FILTER.type.includes(card.Type) && !state.FILTER.member.includes(card.Character)) {
+        if (!state.FILTER.unit.includes(card.Unit) && !state.FILTER.rarity.includes(card.Rarity) && !state.FILTER.type.includes(card.Attr) && !state.FILTER.member.includes(card.CharacterName)) {
             const cardElement = document.createElement("div");
             length += 1;
             cardElement.classList.add("card");
@@ -25,15 +26,15 @@ export async function reloadCard() {
             cardElement.dataset.subunit = card.SubUnit;
             cardElement.dataset.minperformance = card.MinPerformance;
             cardElement.dataset.performance = card.MinPerformance;
-            cardElement.dataset.trainperformance = card.trainingPerformance;
+            cardElement.dataset.trainperformance = card.TrainingPerformance;
             cardElement.dataset.maxperformance = card.MaxPerformance;
             cardElement.dataset.mintechnique = card.MinTechnique;
             cardElement.dataset.technique = card.MinTechnique;
-            cardElement.dataset.traintechnique = card.trainingTechnique;
+            cardElement.dataset.traintechnique = card.TrainingTechnique;
             cardElement.dataset.maxtechnique = card.MaxTechnique;
             cardElement.dataset.minstamina = card.MinStamina;
             cardElement.dataset.stamina = card.MinStamina;
-            cardElement.dataset.trainstamina = card.trainingStamina;
+            cardElement.dataset.trainstamina = card.TrainingStamina;
             cardElement.dataset.maxstamina = card.MaxStamina;
             cardElement.dataset.level = 1;
             cardElement.dataset.master = 0;
@@ -110,6 +111,7 @@ export async function reloadCard() {
 
 
     if (state.STATE) {
+        
         let c = [];
         state.TEAMS.forEach(p => {
             p ? c.push(p.cardId) : null;
