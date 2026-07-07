@@ -7,7 +7,8 @@
     <title>編成シミュレーター</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/responsive.css">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="./css/teams.css">
     <link rel="stylesheet" href="./css/settings.css">
     <link rel="stylesheet" href="./css/dialog.css">
+    <link rel="stylesheet" href="./css/loading.css">
 </head>
 
 <body class="body">
@@ -265,6 +267,11 @@
 
         <!-- カードリストエリア -->
         <section class="cards-list">
+            <div id="card_loading">
+                <div class="spinner"></div>
+                <p>カードデータを読み込み中...</p>
+            </div>
+            
             <div class="cards-filter-div">
                 <div class="cards-filter-length">
                     <p class="cards-length-text">全 0 枚</p>
@@ -310,6 +317,7 @@
 
             </div>
         </dialog>
+
 
 
     </main>

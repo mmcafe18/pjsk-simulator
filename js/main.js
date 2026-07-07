@@ -1,6 +1,6 @@
 import { updatelevelSlider, updatemasterSlider } from "./slider.js";
-import { cardDetail, getConstructNumber, state } from "./state.js";
-            
+import { cardDetail, getConstructNumber, iconToggleTraining, state } from "./state.js";
+
 const slots = document.querySelectorAll(".teams-member-slot");
 const storyBtn = document.querySelectorAll(".story");
 const canvasBtn = document.querySelectorAll(".canvas");
@@ -14,14 +14,30 @@ slots.forEach(slot => {
         slot.classList.add("selected");
         state.SELECTED_SLOT = parseInt(slot.dataset.slotid);
 
-        if(!state.STATE){
+        if (!state.STATE) {
             document.querySelectorAll(".card").forEach(card => {
                 card.classList.remove("disabled");
             });
             state.STATE = true;
         } else {
             const slotId = state.TEAMS[state.SELECTED_SLOT];
+
+            document.querySelectorAll(".card").forEach(p => {
+                state.TEAMS.forEach((t, i) => {
+                    if(i != state.SELECTED_SLOT){
+                        t ? t.character == p.dataset.character ? p.classList.add("disabled") : null : null;
+                    } else {
+                        if(p.dataset.cardId != t?.cardId) {
+                            t ? t.character == p.dataset.character ? p.classList.remove("disabled") : null : null;
+                        }
+                    }
+                });
+            });
+
+            
+
             cardDetail(slotId);
+
         }
     });
 });
@@ -32,7 +48,7 @@ storyBtn.forEach(story => {
         story.classList.toggle("button-active");
         story.dataset.story = story.dataset.story === "true" ? "false" : "true";
         slotId ? slotId[`story_part${getConstructNumber(story.id)}`] = story.dataset.story : false;
-        
+
         updatelevelSlider();
         updatemasterSlider();
     });
@@ -57,6 +73,8 @@ trainingBtn.forEach(training => {
         training.dataset.training = training.dataset.training === "true" ? "false" : "true";
         slotId ? slotId.training = training.dataset.training : false;
 
+        iconToggleTraining(slotId.rarity, slotId.cardId);
+        
         updatelevelSlider();
         updatemasterSlider();
     });

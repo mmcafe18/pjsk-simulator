@@ -94,9 +94,19 @@ export function imageExists(url) {
     });
 }
 
+export function iconToggleTraining(rarity, cardId) {
+    if (rarity == 3 || rarity == 4) {
+        if (document.querySelector(".training").dataset.training === "true") {
+            document.querySelector(`[data-slotid="${state.SELECTED_SLOT}"]`).style.backgroundImage = `url("./image/cards/training/${cardId}.png")`;
+            document.getElementById("setting-icon").style.backgroundImage = `url("./image/cards/training/${cardId}.png")`;
+        } else {
+            document.querySelector(`[data-slotid="${state.SELECTED_SLOT}"]`).style.backgroundImage = `url("./image/cards/non_training/${cardId}.png")`;
+            document.getElementById("setting-icon").style.backgroundImage = `url("./image/cards/non_training/${cardId}.png")`;
+        }
+    }
+}
 
-
-export function cardDetail(obj){
+export function cardDetail(obj) {
     const cardId = obj?.cardId;
     const rarity = obj?.rarity;
     const level = obj?.level;
@@ -112,16 +122,18 @@ export function cardDetail(obj){
     const masterSliderEle = document.getElementById("master_slider");
 
     document.getElementById("setting-icon").style.backgroundImage = `url("./image/cards/non_training/${cardId}.png")`;
-    
+
+    iconToggleTraining(rarity, cardId);
+
     rarity ? document.getElementById("level_slider_max").textContent = state.LEVEL[rarity] : document.getElementById("level_slider_max").textContent = 20;
     rarity ? levelSliderEle.max = state.LEVEL[rarity] : document.querySelector(".level").max = 20;
 
     level ? document.getElementById("lv-text").textContent = level : document.getElementById("lv-text").textContent = 1;
     level ? levelSliderEle.value = level : levelSliderEle.value = 1;
-    
+
     master ? document.getElementById("master-text").textContent = master : document.getElementById("master-text").textContent = 0;
     master ? masterSliderEle.value = master : masterSliderEle.value = 0;
-    
+
     canvasEle.dataset.canvas = canvas;
     canvasEle.dataset.canvas === "true" ? canvasEle.classList.add("button-active") : canvasEle.classList.remove("button-active");
 
@@ -141,7 +153,7 @@ export function cardDetail(obj){
     updatelevelSlider();
     updatemasterSlider();
 
-    
+
     detailCalc(min_param, train_param, levelCalc(min_param, max_param, train_param, levelSliderEle.value, levelSliderEle.max), storyCalc(storyArr, rarity), masterCalc(masterSliderEle.value, rarity), canvasCalc(canvasEle.dataset.canvas, rarity));
     //console.log();
 

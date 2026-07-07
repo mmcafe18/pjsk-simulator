@@ -106,6 +106,8 @@ export async function reloadCard() {
                 
                 cardDetail(cardObj);
             });
+
+            document.getElementById("card_loading").classList.add("hidden");
         }
     });
 

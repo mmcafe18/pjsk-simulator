@@ -78,10 +78,14 @@ document.getElementById("filter-button").addEventListener("click", () => {
         });
 
         for (var i = 1; i <= 5; i++) {
+            let rarityBg;
             const rarityElement = document.createElement("div");
             rarityElement.classList.add("filter-dialog-rarity-icon");
             rarityElement.id = `rarityImg${i}`;
-            rarityElement.style.backgroundImage = `url("./image/icon/star.png")`;
+
+            (i <= 2 || i == 5) ? rarityBg = `url("./image/icon/star.png")` : rarityBg = `url("./image/icon/starTraining.png")`
+            
+            rarityElement.style.backgroundImage = rarityBg;
 
             rarity.appendChild(rarityElement);
 
