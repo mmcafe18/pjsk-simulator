@@ -101,7 +101,7 @@ export async function reloadCard() {
                 state.TEAMS[state.SELECTED_SLOT] = cardObj;
 
                 memberSlot.style.backgroundImage = `url('./image/cards/non_training/${cardObj.cardId}.png')`;
-                memberSlot.querySelector("span")?.remove();
+                memberSlot.querySelector("span")?.classList.add("none");
 
 
                 cardDetail(cardObj);

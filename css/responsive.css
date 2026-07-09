@@ -53,7 +53,7 @@
         height: 100%;
         margin-top: 10%;
 
-        
+
     }
 
     .settings-section-div {
@@ -85,5 +85,13 @@
     }
 
     /* settings.css */
-    
+    .power-pf,
+    .power-te,
+    .power-st {
+        font-size: 1.2cqw;
+    }
+
+    .power-text {
+        font-size: 1.8cqw;
+    }
 }

@@ -152,3 +152,16 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.hold-progress {
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: conic-gradient(#ff7aa2 0deg, transparent 0deg);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.teams-member-slot.is-holding .hold-progress {
+    opacity: 0.75;
+}

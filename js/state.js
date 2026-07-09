@@ -1,5 +1,5 @@
 import { updatelevelSlider, updatemasterSlider } from "./slider.js";
-import { canvasCalc, detailCalc, levelCalc, masterCalc, powerCalc, sliderBg, storyCalc, teamsImage } from "./calclate.js";
+import { canvasCalc, detailCalc, levelCalc, masterCalc, powerCalc, sliderBg, storyCalc, teamsImage } from "./calculate.js";
 
 const pcSettings = document.querySelector(".settings-section-pc");
 const spSettings = document.querySelector(".settings-section-sp");

@@ -7,8 +7,10 @@
     <title>編成シミュレーター</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap">
+    <link rel="shortcut icon" type="image/png" href="./image/favicon.png">
+    <link rel="icon" type="image/png" href="./image/favicon.png">
+    <link rel="apple-touch-icon" href="./image/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap">
     <link rel="stylesheet" href="./css/modern.css">
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -48,27 +50,32 @@
                     <div class="teams-member-slot" data-slotid="0">
                         <div class="canvas-image" id="canvas-image1"></div>
                         <div class="master-image" id="master-image1"></div>
-                        <span class="slot-plus">+</span>
+                        <span class="slot-plus"  data-slot-plus-id="0">+</span>
+                        <div class="hold-progress"></div>
                     </div>
                     <div class="teams-member-slot" data-slotid="1">
                         <div class="canvas-image" id="canvas-image2"></div>
                         <div class="master-image" id="master-image2"></div>
-                        <span class="slot-plus">+</span>
+                        <span class="slot-plus"  data-slot-plus-id="1">+</span>
+                        <div class="hold-progress"></div>
                     </div>
                     <div class="teams-member-slot" data-slotid="2">
                         <div class="canvas-image" id="canvas-image3"></div>
                         <div class="master-image" id="master-image3"></div>
-                        <span class="slot-plus">+</span>
+                        <span class="slot-plus"  data-slot-plus-id="2">+</span>
+                        <div class="hold-progress"></div>
                     </div>
                     <div class="teams-member-slot" data-slotid="3">
                         <div class="canvas-image" id="canvas-image4"></div>
                         <div class="master-image" id="master-image4"></div>
-                        <span class="slot-plus">+</span>
+                        <span class="slot-plus"  data-slot-plus-id="3">+</span>
+                        <div class="hold-progress"></div>
                     </div>
                     <div class="teams-member-slot" data-slotid="4">
                         <div class="canvas-image" id="canvas-image5"></div>
                         <div class="master-image" id="master-image5"></div>
-                        <span class="slot-plus">+</span>
+                        <span class="slot-plus"  data-slot-plus-id="4">+</span>
+                        <div class="hold-progress"></div>
                     </div>
                 </div>
                 <div class="teams-open-button-div">
@@ -238,6 +245,7 @@
     </main>
 </body>
 <script type="module" src="js/main.js"></script>
+<script type="module" src="js/teams.js"></script>
 <script type="module" src="js/slider.js"></script>
 <script type="module" src="js/cardlist.js"></script>
 <script type="module" src="js/calclate.js"></script>

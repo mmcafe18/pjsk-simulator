@@ -1,5 +1,5 @@
 import { state } from "./state.js";
-import { canvasCalc, detailCalc, levelCalc, masterCalc, sliderBg, storyCalc } from "./calclate.js";
+import { canvasCalc, detailCalc, levelCalc, masterCalc, sliderBg, storyCalc } from "./calculate.js";
 
 const level_slider = document.querySelector(".level");
 const master_slider = document.querySelector(".master");
@@ -50,7 +50,7 @@ export function updatemasterSlider() {
 
 }
 
-function updateskillSlider() {
+export function updateskillSlider() {
     const percent =
         (skill_slider.value - skill_slider.min) /
         (skill_slider.max - skill_slider.min) * 100;

@@ -52,3 +52,12 @@
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
 }
+
+.disabled {
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.none {
+    display: none;
+}
