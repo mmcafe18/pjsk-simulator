@@ -1,0 +1,54 @@
+.cards-list-information-div {
+    display: grid;
+
+    place-items: center;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-areas: 
+        "cards-info-length cards-info-amonut cards-info-filter-button";
+}
+
+.cards-list-card-div {
+    overflow-y: scroll;
+}
+
+.cards-filter-length {
+    grid-area: cards-info-length;
+
+    font-weight: 500;
+    font-size: var(--font-main-);
+}
+
+.cards-filter-button {
+    grid-area: cards-info-filter-button;
+}
+
+.filter {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 2vw;
+    background-color: white;
+    font-size: var(--font-main-);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.cards {
+    flex: 1;
+    margin-top: 2%;
+    align-content: start;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+    margin: 5%;
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}

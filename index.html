@@ -9,164 +9,81 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/modern.css">
     <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/teams.css">
     <link rel="stylesheet" href="./css/settings.css">
-    <link rel="stylesheet" href="./css/dialog.css">
+    <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="./css/dialog.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/hover.css">
 </head>
 
 <body class="body">
-    <header>
+    <header class="header">
         <div>
             <h2>編成・総合力シミュレーター</h2>
             <h4>Performance Simulator</h4>
         </div>
     </header>
     <main class="main">
-        <div class="left-area">
-            <!-- 編成エリア -->
-            <section class="teams">
-                <div class="teams-namebox-power-dev">
-                    <input type="text" id="teamName" class="team-name-input" placeholder="編成名" maxlength="10">
-                    <div class="teams-totalPower-dev">
+        <!-- 編成エリア -->
+        <section class="teams-section">
+            <div class="teams-top">
+                <div class="teams-information-div">
+                    <div class="teams-name-div">
+                        <input type="text" class="team-name-input" id="teamName" placeholder="編成名" maxlength="10">
+                    </div>
+                    <div class="teams-totalPower-div">
                         <div class="teams-totalPower-img"></div>
                     </div>
-                    <div class="teams-totalPower-span">
-                        <span id="totalPower">0</span>
+                    <div class="teams-totalPower-span" id="totalPower">
+                        0
                     </div>
                 </div>
-                <div class="teams-member-dev">
+                <div class="teams-member-div">
                     <div class="teams-member-slot" data-slotid="0">
                         <div class="canvas-image" id="canvas-image1"></div>
-                        <div class="master-image" id="master-image1"></div><span class="slot-plus">+</span>
+                        <div class="master-image" id="master-image1"></div>
+                        <span class="slot-plus">+</span>
                     </div>
                     <div class="teams-member-slot" data-slotid="1">
                         <div class="canvas-image" id="canvas-image2"></div>
-                        <div class="master-image" id="master-image2"></div><span class="slot-plus">+</span>
+                        <div class="master-image" id="master-image2"></div>
+                        <span class="slot-plus">+</span>
                     </div>
                     <div class="teams-member-slot" data-slotid="2">
                         <div class="canvas-image" id="canvas-image3"></div>
-                        <div class="master-image" id="master-image3"></div><span class="slot-plus">+</span>
+                        <div class="master-image" id="master-image3"></div>
+                        <span class="slot-plus">+</span>
                     </div>
                     <div class="teams-member-slot" data-slotid="3">
                         <div class="canvas-image" id="canvas-image4"></div>
-                        <div class="master-image" id="master-image4"></div><span class="slot-plus">+</span>
+                        <div class="master-image" id="master-image4"></div>
+                        <span class="slot-plus">+</span>
                     </div>
                     <div class="teams-member-slot" data-slotid="4">
                         <div class="canvas-image" id="canvas-image5"></div>
-                        <div class="master-image" id="master-image5"></div><span class="slot-plus">+</span>
+                        <div class="master-image" id="master-image5"></div>
+                        <span class="slot-plus">+</span>
                     </div>
                 </div>
-
-                <div class="teams-open-div">
-                    <div>
-                        <input type="button" class="detail-open" value="詳細設定 ▼">
-                        <!-- <div class="settings-responsive">
-                            <div class="settings-div">
-                                <h2 class="card-settings-title">カード詳細設定</h2>
-                                <div class="settings-reset">
-                                    <input type="button" class="reset" id="reset-button" value="リセット">
-                                </div>
-                            </div>
-
-
-                            <div class="settings-icon-power-div">
-                                <div class="settings-icon" id="setting-icon"></div>
-                                <div class="settings-power-detail">
-                                    <div class="power-pf">
-                                        <h3>パフォーマンス</h3>
-                                        <h3 class="power-text" id="param1"></h3>
-                                    </div>
-                                    <div class="power-te">
-                                        <h3>テクニック</h3>
-                                        <h3 class="power-text" id="param2"></h3>
-                                    </div>
-                                    <div class="power-st">
-                                        <h3>スタミナ</h3>
-                                        <h3 class="power-text" id="param3"></h3>
-                                    </div>
-                                </div>
-                                <div class="settings-story">
-                                    <div class="story-text1">
-                                        <h3>サイドストーリー</h3>
-                                    </div>
-                                    <div class="story-text2">
-                                        <h3>解放状況</h3>
-                                    </div>
-                                    <div class="story-text-btn">
-                                        <input type="button" class="story" id="story-part1" value="前編"
-                                            data-story="false">
-                                        <input type="button" class="story" id="story-part2" value="後編"
-                                            data-story="false">
-                                    </div>
-                                </div>
-                                <div class="settings-canvas">
-                                    <div class="canvas-text1">
-                                        <h3>キャンバス</h3>
-                                    </div>
-                                    <div class="canvas-text2">
-                                        <h3>製作状況</h3>
-                                    </div>
-                                    <div class="canvas-text-btn">
-                                        <input type="button" class="canvas" id="canvas" value="製作済み"
-                                            data-canvas="false">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="settings-status-div">
-                                <div class="settings-level">
-                                    <div class="level-text">
-                                        <h3>レベル：</h3>
-                                        <h3 id="lv-text">1</h3>
-                                    </div>
-                                    <div class="level-slider">
-                                        <span class="slider-min">1</span>
-                                        <input type="range" class="level" id="level_slider" min="1" max="20" value="1">
-                                        <span class="slider-max" id="level_slider_max">20</span>
-                                    </div>
-                                </div>
-                                <div class="settings-training">
-                                    <div class="training-text">
-                                        <h3>特訓</h3>
-                                    </div>
-                                    <div class="training-text-btn">
-                                        <input type="button" class="training" value="特訓済み" data-training="false">
-                                    </div>
-                                </div>
-                                <div class="settings-master">
-                                    <div class="master-text">
-                                        <h3>マスラン：</h3>
-                                        <h3 id="master-text">0</h3>
-                                    </div>
-                                    <div class="master-slider">
-                                        <span class="slider-min">0</span>
-                                        <input type="range" class="master" id="master_slider" min="0" max="5" value="0">
-                                        <span class="slider-max">5</span>
-                                    </div>
-                                </div>
-                                <div class="settings-skill">
-                                    <div class="skill-text">
-                                        <h3>スキル：</h3>
-                                        <h3 id="skill-text">1</h3>
-                                    </div>
-                                    <div class="skill-slider">
-                                        <span class="slider-min">1</span>
-                                        <input type="range" class="skill" min="1" max="4" value="1">
-                                        <span class="slider-max">4</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
+                <div class="teams-open-button-div">
+                    <span class="detail-open"></span>
+                    <span class="detail-open">カード詳細設定</span>
+                    <span class="detail-open arrow">▼</span>
                 </div>
+            </div>
+
+            <section class="teams-settings-wrapper settings-section-sp">
             </section>
+        </section>
 
-            <!-- 設定パネルエリア -->
+        <!-- 設定パネルエリア -->
+        <section class="settings-section settings-section-pc">
             <section class="settings">
                 <div class="settings-div">
                     <h2 class="card-settings-title">カード詳細設定</h2>
@@ -263,25 +180,26 @@
 
 
             </section>
-        </div>
+        </section>
 
         <!-- カードリストエリア -->
-        <section class="cards-list">
+        <section class="cards-list-section">
             <div id="card_loading">
                 <div class="spinner"></div>
                 <p>カードデータを読み込み中...</p>
             </div>
-            
-            <div class="cards-filter-div">
+            <div class="cards-list-information-div">
+
                 <div class="cards-filter-length">
                     <p class="cards-length-text">全 0 枚</p>
                 </div>
                 <div class="cards-filter-button">
                     <input type="button" class="filter" id="filter-button" value="☰ 絞り込む">
                 </div>
-            </div>
-            <div class="cards"></div>
 
+            </div>
+            <div class="cards cards-list-card-div">
+            </div>
         </section>
 
         <dialog class="resetDialog">
@@ -317,15 +235,12 @@
 
             </div>
         </dialog>
-
-
-
     </main>
-    <script type="module" src="js/main.js"></script>
-    <script type="module" src="js/slider.js"></script>
-    <script type="module" src="js/cardlist.js"></script>
-    <script type="module" src="js/calclate.js"></script>
-    <script type="module" src="js/dialog.js"></script>
 </body>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/slider.js"></script>
+<script type="module" src="js/cardlist.js"></script>
+<script type="module" src="js/calclate.js"></script>
+<script type="module" src="js/dialog.js"></script>
 
 </html>

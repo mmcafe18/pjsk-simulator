@@ -1,12 +1,17 @@
 import { updatelevelSlider, updatemasterSlider } from "./slider.js";
 import { cardDetail, getConstructNumber, iconToggleTraining, state } from "./state.js";
 
+import { moveSettingsSection } from "./state.js";
+
+
 const slots = document.querySelectorAll(".teams-member-slot");
 const storyBtn = document.querySelectorAll(".story");
 const canvasBtn = document.querySelectorAll(".canvas");
 const trainingBtn = document.querySelectorAll(".training");
 
-const detailBtn = document.querySelector(".detail-open");
+const main = document.querySelector(".main");
+const detailBtn = document.querySelector(".teams-open-button-div");
+
 
 slots.forEach(slot => {
     slot.addEventListener("click", () => {
@@ -81,8 +86,11 @@ trainingBtn.forEach(training => {
 });
 
 detailBtn.addEventListener("click", () => {
-    document.querySelector(".teams").classList.toggle("open");
-    document.querySelector(".cards-list").classList.toggle("open");
-    document.querySelector(".teams-namebox-power-dev").classList.toggle("open");
-    document.querySelector(".settings-responsive").classList.toggle("open");
+    main.classList.toggle("open");
 });
+
+
+
+
+moveSettingsSection();
+window.addEventListener("resize", moveSettingsSection);

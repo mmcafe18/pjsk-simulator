@@ -1,102 +1,89 @@
 @media (max-width: 768px) {
+
+    /* main.css */
     .main {
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-        padding: 12px;
-        gap: 12px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40vw 1fr;
+        grid-template-areas:
+            "teams"
+            "cards";
+
+        transition: grid-template-rows .5s ease;
     }
 
-    .left-area {
-        width: 100%;
-        height: 35vw;
+    .main.open {
+        grid-template-rows: 70vw 1fr;
+
     }
 
-    .teams,
-    .cards {
-        width: 100%;
-    }
-
-    /* スマホでは常時表示しない */
-    .settings {
+    .settings-section {
         display: none;
     }
 
-    .cards {
-        height: 45vh;
-    }
 
-    #totalPower {
-        font-size: clamp(10px, 7vw, 72px);
-        font-weight: bold;
+    .arrow {
         color: #404040;
+        display: inline-block;
+        transition: transform .5s ease;
+
+        margin-left: 2%;
     }
 
-    .teams-open-div {
-        height: 30%;
+    /* teams.css */
+    .teams-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        grid-template-rows: 2fr 6fr 2fr;
+        grid-template-areas:
+            "info"
+            "member"
+            "button";
     }
 
-    .teams {
-        transition: height 0.4s linear;
+    .main.open .arrow {
+        transform: rotate(-180deg);
     }
 
-    .settings-responsive {
-        margin-top: 2%;
-        height: 0vh;
-        transition: height 0.4s linear;
-        overflow: hidden;
+    .teams-settings-wrapper {
+        display: grid;
+        flex: 1;
+        height: 100%;
+        margin-top: 10%;
+
+        
     }
 
-    .settings-responsive.open {
-        height: 18vh;
-    }
-
-    .teams-namebox-power-dev.open {
-        height: 10%;
-    }
-
-
-    .teams.open {
-        height: 75vh;
-    }
-
-    .cards-list {
-        transition: margin 0.4s linear;
-    }
-
-    .cards-list.open {
-        margin-top: 23vh;
+    .settings-section-div {
+        display: none;
     }
 
     .detail-open {
-        display: block;
-        margin-top: 1.5%;
+        line-height: 1;
+    }
+
+    .teams-open-button-div {
+        flex-shrink: 0;
+
+        grid-area: button;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 10px;
+        font-size: 2.5cqw;
         margin-left: 2%;
         width: 96%;
-        height: 4cqw;
-        border: none;
-        border-radius: 10px;
-        font-size: 0.5cqw;
-        font: var(--font-main-);
-        font-weight: 600;
+        height: 20%;
+        font-weight: 500;
+        background-color: #eee;
         color: #404040;
+
         cursor: pointer;
-        transition: transform 0.5s, box-shadow 0.5s;
     }
 
-    .card-settings-title-responsive {
-        display: block;
-        margin-top: 1%;
-        margin-left: 2%;
-        font-size: clamp(16px, 2vw, 24px);
-        color: #404040;
-    }
-
-    .cards-filter-div.open {
-        margin-top: 23vh;
-    }
-
-    .settings-responsive * {
-        display: block;
-    }
+    /* settings.css */
+    
 }

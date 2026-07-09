@@ -1,6 +1,9 @@
 :root {
     --border-: 3px solid rgb(230, 214, 230);
+    --border-slot-: 2px solid #ddd;
     --border-color-: #999999;
+    --border-shadow-: 0 6px 16px rgba(0, 0, 0, 0.15);
+
     --font-main-: "M PLUS Rounded 1c", sans-serif;
     --font-size-: clamp(16px, 2vw, 24px);
 }

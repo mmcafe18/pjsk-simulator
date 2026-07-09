@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    border: var(--border-);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.header div {
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.header h2 {
+    font-size: clamp(1.1rem, 2.2vw, 2rem);
+    line-height: 1.2;
+}
+
+.header h4 {
+    font-size: clamp(0.75rem, 1.2vw, 1.1rem);
+    line-height: 1.2;
+}

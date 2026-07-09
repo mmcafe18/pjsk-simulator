@@ -1,6 +1,10 @@
 import { updatelevelSlider, updatemasterSlider } from "./slider.js";
 import { canvasCalc, detailCalc, levelCalc, masterCalc, powerCalc, sliderBg, storyCalc, teamsImage } from "./calclate.js";
 
+const pcSettings = document.querySelector(".settings-section-pc");
+const spSettings = document.querySelector(".settings-section-sp");
+
+
 export const state = {
     STATE: false,
     DIALOG: false,
@@ -170,3 +174,11 @@ export function toggleFilter(category, value) {
         list.push(value);
     }
 };
+
+export function moveSettingsSection() {
+    if (window.innerWidth <= 768) {
+        spSettings.append(...pcSettings.children);
+    } else {
+        pcSettings.append(...spSettings.children);
+    }
+}

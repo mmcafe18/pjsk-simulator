@@ -1,0 +1,58 @@
+.main {
+    display: grid;
+    grid-template-columns: 6.5fr 3.5fr;
+    grid-template-rows: 20vw 1fr;
+    grid-template-areas:
+        "teams cards"
+        "settings cards";
+    
+    gap: 20px;
+    min-height: 0; /* 重要 */
+}
+
+.cards-list-section {
+    grid-area: cards;
+    position: relative;
+
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas:
+        "cards-info"
+        "cards-card";
+    
+    background: white;
+    border: var(--border-);
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+
+.teams-section {
+    grid-area: teams;
+
+    display: grid;
+    grid-template-rows: 2fr 8fr;
+    grid-template-areas:
+        "info"
+        "member";
+        
+    gap: 0px;
+
+    height: 100%;
+
+    background: white;
+    border: var(--border-);
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.settings-section {
+    grid-area: settings;
+
+    background: white;
+    border: var(--border-);
+    border-radius: 20px;
+}

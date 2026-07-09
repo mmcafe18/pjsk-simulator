@@ -1,20 +1,28 @@
 .settings-div {
-    display: flex;
-    position: relative;
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "title reset";
 }
 
+
 .settings-reset {
-    margin-top: 1.5%;
-    position: absolute;
-    right: 2%;
+    grid-area: reset;
+
+    align-self: center;
+    justify-self: right;
+    padding-right: 7%;
 }
 
 .reset {
+    
+
     width: 9cqw;
     height: 2.5cqw;
     border: none;
     border-radius: 10px;
-    font-size: 0.5cqw;
+    font-size: var(--font-size-);
     font: var(--font-main-);
     font-weight: 600;
     background-color: #ff7590;
@@ -23,15 +31,14 @@
     transition: transform 0.5s, box-shadow 0.5s;
 }
 
-.reset:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
+
 
 .card-settings-title {
+    grid-area: title;
+
     margin-top: 1%;
     margin-left: 2%;
-    font-size: clamp(16px, 2vw, 24px);
+    font-size: 1.5cqw;
     color: #404040;
 }
 
@@ -122,7 +129,7 @@
     align-items: flex-end;
     padding-left: 4%;
     height: 33%;
-    font-size: 1.1cqw;
+    font-size: 1.2cqw;
     color: #404040;
 }
 
@@ -131,7 +138,7 @@
     text-align: right;
     padding-left: 3%;
     padding-right: 20%;
-    font-size: 1.5cqw;
+    font-size: 1.8cqw;
     color: #404040;
 }
 
@@ -247,13 +254,4 @@
 .button-active {
     background-color: #ff7590;
     color: #fff9f9;
-}
-
-.story:hover,
-.canvas:hover,
-.training:hover {
-    background-color: #ff7590;
-    color: #fff9f9;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }

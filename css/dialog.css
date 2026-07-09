@@ -12,6 +12,9 @@ button {
     padding: 24px;
     width: 45vw;
     box-shadow: 0 10px 30px rgba(0,0,0,.3);
+
+    justify-self: center;
+    align-self: center;
 }
 
 .filterDialog {
@@ -108,18 +111,6 @@ button {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.cards-filter-length {
-    justify-items: center;
-    width: 50%;
-    height: 100%;
-}
-
-.cards-length-text {
-    padding: 8%;
-    font-size: clamp(20px, 2vw, 36px);
-    font-weight: 500;
-    color: #404040;
-}
 
 .non-selected {
     opacity: 0.2;

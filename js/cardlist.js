@@ -1,7 +1,7 @@
 import { state, observer, cardDetail } from "./state.js";
 
 const cardsArea = document.querySelector(".cards");
-const membersArea = document.querySelector(".teams-member-dev");
+const membersArea = document.querySelector(".teams-member-div");
 
 const API_URL = location.hostname === "localhost" ? "http://localhost:3000" : "https://pjsk-simulator-api.onrender.com";
 
@@ -103,7 +103,7 @@ export async function reloadCard() {
                 memberSlot.style.backgroundImage = `url('./image/cards/non_training/${cardObj.cardId}.png')`;
                 memberSlot.querySelector("span")?.remove();
 
-                
+
                 cardDetail(cardObj);
             });
 
@@ -113,7 +113,7 @@ export async function reloadCard() {
 
 
     if (state.STATE) {
-        
+
         let c = [];
         state.TEAMS.forEach(p => {
             p ? c.push(p.cardId) : null;
